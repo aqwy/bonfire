@@ -1,0 +1,2256 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+SceneSettings:
+  m_ObjectHideFlags: 0
+  m_PVSData: 
+  m_PVSObjectsArray: []
+  m_PVSPortalsArray: []
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: .25
+    backfaceThreshold: 100
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 6
+  m_Fog: 0
+  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: .00999999978
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: .211999997, g: .226999998, b: .259000003, a: 1}
+  m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
+  m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: .5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+--- !u!127 &3
+LevelGameManager:
+  m_ObjectHideFlags: 0
+--- !u!157 &4
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 5
+  m_GIWorkflowMode: 0
+  m_LightmapsMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
+  m_LightmapEditorSettings:
+    serializedVersion: 3
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_AOMaxDistance: 1
+    m_Padding: 2
+    m_CompAOExponent: 0
+    m_LightmapParameters: {fileID: 0}
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherRayCount: 1024
+  m_LightmapSnapshot: {fileID: 0}
+  m_RuntimeCPUUsage: 25
+--- !u!196 &5
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentRadius: .5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: .400000006
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    accuratePlacement: 0
+    minRegionArea: 2
+    cellSize: .166666672
+    manualCellSize: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &14416461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 14416464}
+  - 212: {fileID: 14416463}
+  - 60: {fileID: 14416462}
+  m_Layer: 0
+  m_Name: Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &14416462
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 14416461}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 11.9622679, y: .256196022}
+      - {x: 11.3061962, y: 1.13035941}
+      - {x: 8.49845028, y: 1.00851941}
+      - {x: 7.77571201, y: .338104725}
+      - {x: 6.49845123, y: .199473858}
+      - {x: 5.62868595, y: -.703624249}
+      - {x: 4.39845133, y: -.726363182}
+      - {x: 3.4682157, y: -.354398727}
+      - {x: 2.20154881, y: -.349101543}
+      - {x: 1.06821549, y: .71756506}
+      - {x: -.952323675, y: .749349594}
+      - {x: -1.78410769, y: .206970692}
+      - {x: -3.21679068, y: .215365887}
+      - {x: -5.18255854, y: .978934526}
+      - {x: -8.21369171, y: .850898504}
+      - {x: -8.94352531, y: .0266113281}
+      - {x: -10.4476767, y: -.384634495}
+      - {x: -12.1180925, y: -.25594759}
+      - {x: -12.3741636, y: -.024813652}
+      - {x: -13.4666662, y: -.0845694542}
+      - {x: -13.4666662, y: -1.18333328}
+      - {x: 13.4666662, y: -1.18333328}
+      - {x: 13.4613695, y: -.0930294991}
+--- !u!212 &14416463
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 14416461}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: af0bd32f7f904504ea3d689ef14e60fd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &14416464
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 14416461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -4.80000019, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+--- !u!1 &317071980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 317071982}
+  - 212: {fileID: 317071981}
+  m_Layer: 0
+  m_Name: Grass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &317071981
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 317071980}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 68ed07c14d39cd14396da91b6c7e9c6a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &317071982
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 317071980}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.67000008, y: -4.03999996, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+--- !u!1 &696290494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 696290495}
+  - 114: {fileID: 696290508}
+  - 33: {fileID: 696290507}
+  - 23: {fileID: 696290506}
+  - 114: {fileID: 696290505}
+  - 114: {fileID: 696290504}
+  - 50: {fileID: 696290503}
+  - 114: {fileID: 696290502}
+  - 114: {fileID: 696290501}
+  - 114: {fileID: 696290500}
+  - 114: {fileID: 696290499}
+  - 114: {fileID: 696290498}
+  - 114: {fileID: 696290497}
+  - 95: {fileID: 696290509}
+  - 114: {fileID: 696290496}
+  m_Layer: 0
+  m_Name: Bee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &696290495
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 831222213}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!114 &696290496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fcb9109814544f4c94fbbeb8540a001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ReplaceTextureWithSprite: {fileID: 0}
+  ReplaceTextureWithTexture: {fileID: 0}
+--- !u!114 &696290497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6138f97f7bf4c28459d6b9b00bb42a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDamageMin: 0
+  DamageMin: 0
+  UseDamageMax: 0
+  DamageMax: 0
+  UseAlphaCountMin: 0
+  AlphaCountMin: 0
+  UseAlphaCountMax: 0
+  AlphaCountMax: 0
+  UseRemainingAlphaMin: 0
+  RemainingAlphaMin: 0
+  UseRemainingAlphaMax: 1
+  RemainingAlphaMax: .99000001
+  OnRequirementMet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 696290498}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 696290503}
+        m_MethodName: set_gravityScale
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 696290509}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dead
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 696290508}
+        m_MethodName: ReplaceTextureWith
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2800000, guid: 4c3ed67b3f3378f43a32fdc67e30bb3f,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  met: 0
+--- !u!114 &696290498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8ec3a98dc00244aae8ba99e86bfd4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Acceleration: 5
+  MaximumSpeed: 2
+  SpeedBoost: 2.5
+  MinimumDistance: 1
+  Points:
+  - {x: -1, y: 1}
+  - {x: 1, y: 1}
+  - {x: -1, y: -1}
+  - {x: 1, y: -1}
+  targetPoint: {x: 0, y: 0}
+--- !u!114 &696290499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6138f97f7bf4c28459d6b9b00bb42a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDamageMin: 0
+  DamageMin: 0
+  UseDamageMax: 0
+  DamageMax: 0
+  UseAlphaCountMin: 0
+  AlphaCountMin: 0
+  UseAlphaCountMax: 0
+  AlphaCountMax: 10
+  UseRemainingAlphaMin: 0
+  RemainingAlphaMin: 0
+  UseRemainingAlphaMax: 1
+  RemainingAlphaMax: .899999976
+  OnRequirementMet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 696290500}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  met: 0
+--- !u!114 &696290500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fbcb04c243139438f8b0b3f28d0e81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Life: 3
+  Fade: 1
+  FadeDuration: 1
+  Shrink: 0
+  ShrinkDuration: 1
+  RandomizeOnEnable: 0
+  LifeMin: 3
+  LifeMax: 5
+  startColor: {r: 0, g: 0, b: 0, a: 0}
+  startLocalScale: {x: 0, y: 0, z: 0}
+--- !u!114 &696290501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c5f1e1730d93a4880c460394961c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MassPerSolidPixel: .00999999978
+--- !u!114 &696290502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3c1fd85e053f64ab748a5f998a9f45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &696290503
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Mass: 61.0999985
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!114 &696290504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17edb0917bef22a4e8ae01c185e2d25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsTrigger: 0
+  Material: {fileID: 0}
+  child: {fileID: 831222208}
+  awoken: 1
+  CellSize: 64
+  Detail: .899999976
+  Weld: .00999999978
+  expectedCellSize: 0
+  expectedWidth: 0
+  expectedHeight: 0
+  cellWidth: 0
+  cellHeight: 0
+  cells:
+  - Collider: {fileID: 831222212}
+  - Collider: {fileID: 831222211}
+  - Collider: {fileID: 831222210}
+  - Collider: {fileID: 831222209}
+--- !u!114 &696290505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee68f30327e7b8c49b456ba022e81845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &696290506
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 5b00a7de0ddb01248a3ad80a9c634599, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &696290507
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Mesh: {fileID: 0}
+--- !u!114 &696290508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee430af1422046f4c8f35812bff0e6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnAlphaDataReplaced:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnAlphaDataModified:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dD2dRectEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnAlphaDataSubset:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dD2dRectEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnDamageChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dFloatFloatEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnStartSplit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnEndSplit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dDestructibleListEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MainTex: {fileID: 2800000, guid: 289f7f4484d558d4c93c19c5b4029220, type: 3}
+  DensityTex: {fileID: 0}
+  HealTex: {fileID: 0}
+  Indestructible: 0
+  RecordAlphaCount: 1
+  AutoSharpen: 1
+  AutoSplit: 1
+  SplitPixelsMin: 5
+  SplitExpand: -1
+  SplitFeather: 1
+  Sharpness: 1
+  color: {r: 1, g: 1, b: 1, a: 1}
+  damage: 0
+  textureRect:
+    serializedVersion: 2
+    x: .0546875
+    y: .1328125
+    width: .8984375
+    height: .7109375
+  originalRect:
+    serializedVersion: 2
+    x: -.519999981
+    y: -.469999999
+    width: 1.04999995
+    height: .909999967
+  alphaRect:
+    serializedVersion: 2
+    x: -.534807682
+    y: -.484777778
+    width: 1.06961536
+    height: .929555535
+  alphaWidth: 115
+  alphaHeight: 91
+  alphaCount: 6110
+  originalAlphaCount: 6110
+  alphaData: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001d6e6e6e6e6e6e6e1d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000086dbfffffffffffffffffffffbdb86000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006ef6fffffffffffffffffffffffffffffffffeae1d00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001de6fffffffffffffffffffffffffffffffffffffffffb6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055f6ffffffffffffffffffffffffffffffffffffffffffffffbf000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003af6ffffffffffffffffffffffffffffffffffffffffffffffffffae000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f6ffffffffffffffffffffffffffffffffffffffffffffffffffffff9b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffff55000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f6fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc1f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf00000000000000000000000000000000000000000000000000000000000000000000000000000000000000001d6e6e1d00000000000000000000000000000000000000000000000000000000000000efffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000000000000000000000000000000000000000000000000000000000000000000000000000006ee6fefffff61d000000000000000000000000000000000000000000000000000000000000feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf0000000000000000000000000000000000000000000000000000000000000000000000000000003aefffffffffffffe600000000000000000000000000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f0000000000000000000000000000000000000000000000000000000000000000000000003adbffffffffffffffffff9b0000000000006e6e6e6e6e6e6e5500000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9f000000000000000000000000000000000000000000000000000000000000000000000055fefffffffffffffffffffffb000086e6f6ffffffffffffffffffffefae480000000000000000000086ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef000000000000000000000000000000000000000000000000000000000000000000003afefffffffffffffffffffffffff6fbffffffffffffffffffffffffffffffffeb860f00000000000000ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000000000000000000000000000000000aefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff962000000000000f6ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f000000000000000000000000000000000000000000000000000000000000000000afffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeb3b0000003affffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaf00000000000000000000000000000000000000000000000000000000000000000056fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd550000ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf00000000000000000000000000000000000000000000000000000000000000000000eaffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff873afeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000000000000000000000000000000000000000000000000000000000000000004afffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f00000000000000000000000000000000000000000000000000000000000000000000cfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000000000000000000000000000000000002cfeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f0000000000000000000000000000000000000000000000000000000000000000000000c7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f0000000000000000000000000000000000000000000000000000000000000000000000dbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000000000000000000000000000000000000000000000000000000000000000efffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f0000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000000000000000000000000000000000000000000000000000000000000000dbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf0000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf000000000000000000000000000000000000000000000000000000000000000000dbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9f000000000000000000000000000000000000000000000000000000000000000000f6ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5f000000000000000000000000000000000000000000000000000000000000000055ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf0000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f0000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f000000000000000f3f3f3f3f2f00000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf000000003f6f9fcfffffffffffffcf2f0000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f5f8fbfffffffffffffffffffffffffff2f000000000000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf000000000000000000000000000000000000efffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0f0000000000000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000086ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0f0000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaf1f00000000000000000000000000000000000047ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000000000000000000000004f8fdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf0f000000000000000000004f9fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff4f000000000000001f8fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6f0000000000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000008fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef00000000005fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaf000000001fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6f000000003fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2f000000002fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf000000000000dfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9f0000000000004fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5f00000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f000000000000003fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf0000000000000000009fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f0000000000000000001fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf9f5f2f1fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff4f000000000000000000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf8f1f00000000000f8fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0f000000000000000000000feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe9d7f7f7f7f7f7f7f7f4f3f2f000000000000000000000000003f7fecffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf0000000000000000000000005fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf00000000000000000000000000000000000000000000000000000000a0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f00000000000000000000000086fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb0000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6e000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef0000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf0000000000000000000000000055ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3a000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f0000000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf0000000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef1f0000000000000000000000000000009bfefffffffffffffffffffffffffffffffffffffffffffffffffffb1d000000000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5f00000000000000000000000000000000001dedffffffffffffffffffffffffffffffffffffffffffffffff860000000000000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf4f000000000000000000000000000000000000001ff6ffffffffffffffffffffffffffffffffffffffffffffef00000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffffffffffffffe7f3f3f3f3f2f000000000000000000000000000000000000000000003fefffffffffffffffffffffffffffffffffffffffffff550000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffffffffffe5500000000000000000000000000000000000000000000000000000000000f8fc7f3ffffffffffffffffffffffffffffffffffdb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffffffe55000000000000000000000000000000000000000000000000000000000000000000003aefffffffffffffffffffffffffffffff3a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffe550000000000000000000000000000000000000000000000000000000000000000000000000086fbffffffffffffffffffffffffae0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000aefffffffffffffffffffffffffe550000000000000000000000000000000000000000000000000000000000000000000000000000001dbffeffffffffffffffffffdb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000dbfffffffffffffffffffffe550000000000000000000000000000000000000000000000000000000000000000000000000000000000003ae6ffffffffffffffdb0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfeffffffffffffffff6e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000aefbffffffef6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001ddbfffffffffffb6e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001d6e6e6e55000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  alphaScale: {x: 1.0926317, y: 1.37700212}
+  alphaOffset: {x: .0420172177, y: .121267356}
+--- !u!95 &696290509
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 696290494}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a705b24dbca074441b2715c6dfc5b57f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &704246406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 704246408}
+  - 212: {fileID: 704246407}
+  m_Layer: 0
+  m_Name: Grass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &704246407
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 704246406}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 3919260f69015b44395c0b6a7f0ee53d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &704246408
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 704246406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.92999983, y: -4.98999977, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+--- !u!1 &831222208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 831222213}
+  - 60: {fileID: 831222212}
+  - 60: {fileID: 831222211}
+  - 60: {fileID: 831222210}
+  - 60: {fileID: 831222209}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &831222209
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 831222208}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 64.0019608, y: 64.5}
+      - {x: 64.5, y: 64.0019608}
+      - {x: 110.5, y: 64.3050308}
+      - {x: 110.694969, y: 64.5}
+      - {x: 106.293747, y: 78.5}
+      - {x: 104.5, y: 79.9260101}
+      - {x: 98.5, y: 80.4921875}
+      - {x: 90.5, y: 87.9900436}
+      - {x: 84.5, y: 87.9155273}
+      - {x: 65.5, y: 71.1614609}
+      - {x: 64.5, y: 70.9644318}
+      - {x: 64.0355682, y: 70.5}
+--- !u!60 &831222210
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 831222208}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 2.07399106, y: 64.5}
+      - {x: 2.5, y: 64.0739899}
+      - {x: 63.5, y: 64.0019608}
+      - {x: 63.9980392, y: 64.5}
+      - {x: 63.6048965, y: 70.5}
+      - {x: 63.5, y: 70.6048965}
+      - {x: 61.5, y: 69.0669632}
+      - {x: 40.5, y: 71.6847153}
+      - {x: 30.5, y: 86.9155273}
+      - {x: 28.5, y: 87.9644318}
+      - {x: 23.5, y: 87.7643661}
+      - {x: 7.17015696, y: 77.5}
+      - {x: 6.17015696, y: 75.5}
+      - {x: 6.70625019, y: 72.5}
+      - {x: 2.5, y: 65.1597214}
+--- !u!60 &831222211
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 831222208}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 65.4552231, y: 2.5}
+      - {x: 79.5, y: 2.4552238}
+      - {x: 88.6741943, y: 10.5}
+      - {x: 92.6048965, y: 42.5}
+      - {x: 91.8125, y: 45.5}
+      - {x: 92.5, y: 45.7062492}
+      - {x: 106.5, y: 44.1183586}
+      - {x: 108.829842, y: 46.5}
+      - {x: 108.998039, y: 52.5}
+      - {x: 111.956734, y: 55.5}
+      - {x: 110.92601, y: 63.5}
+      - {x: 110.5, y: 63.9260101}
+      - {x: 64.5, y: 63.9980392}
+      - {x: 64.0019608, y: 63.5}
+      - {x: 64.0019608, y: 3.5}
+      - {x: 64.5, y: 3.00196075}
+--- !u!60 &831222212
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 831222208}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 62.6323547, y: 3.5}
+      - {x: 63.5, y: 3.02032518}
+      - {x: 63.9796753, y: 3.5}
+      - {x: 63.9980392, y: 63.5}
+      - {x: 63.5, y: 63.9980392}
+      - {x: 2.5, y: 63.9980392}
+      - {x: 1.88942313, y: 63.5}
+      - {x: 1.93303573, y: 61.5}
+      - {x: 14.809783, y: 54.5}
+      - {x: 12.3258066, y: 35.5}
+      - {x: 15.1432161, y: 28.5}
+      - {x: 12.2314281, y: 22.5}
+      - {x: 12.2356319, y: 21.5}
+      - {x: 15.5, y: 18.0844746}
+      - {x: 16.5, y: 17.8553295}
+      - {x: 22.5, y: 15.6241379}
+      - {x: 23.5, y: 15.9562216}
+      - {x: 26.5, y: 20.0203247}
+      - {x: 27.5, y: 20.0099602}
+      - {x: 42.5, y: 19.2356319}
+      - {x: 52.5, y: 24.8626938}
+      - {x: 52.8571434, y: 24.5}
+      - {x: 55.3258057, y: 13.5}
+      - {x: 55.9380531, y: 12.5}
+      - {x: 56.3258057, y: 10.5}
+      - {x: 61.5, y: 4.05652189}
+      - {x: 62.5, y: 3.62413788}
+--- !u!4 &831222213
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 831222208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.534807682, y: -.484777778, z: 0}
+  m_LocalScale: {x: .00930100307, y: .0102148959, z: 0}
+  m_Children: []
+  m_Father: {fileID: 696290495}
+  m_RootOrder: 0
+--- !u!1 &957010448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 957010450}
+  - 212: {fileID: 957010449}
+  m_Layer: 0
+  m_Name: Grass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &957010449
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 957010448}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 4a2ea40186305c248b49bf8747de0f73, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &957010450
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 957010448}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.0299997, y: -3.32999992, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+--- !u!1 &1036553458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1036553459}
+  - 114: {fileID: 1036553460}
+  m_Layer: 0
+  m_Name: Camera Root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1036553459
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036553458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1281053354}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!114 &1036553460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036553458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f92d50c68f6a44a93e3874679484d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
+--- !u!1 &1046712779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1046712780}
+  - 114: {fileID: 1046712794}
+  - 33: {fileID: 1046712793}
+  - 23: {fileID: 1046712792}
+  - 114: {fileID: 1046712791}
+  - 114: {fileID: 1046712790}
+  - 50: {fileID: 1046712789}
+  - 114: {fileID: 1046712788}
+  - 114: {fileID: 1046712787}
+  - 114: {fileID: 1046712786}
+  - 114: {fileID: 1046712785}
+  - 114: {fileID: 1046712784}
+  - 114: {fileID: 1046712783}
+  - 95: {fileID: 1046712782}
+  - 114: {fileID: 1046712781}
+  m_Layer: 0
+  m_Name: Bee 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1046712780
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1243446716}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+--- !u!114 &1046712781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fcb9109814544f4c94fbbeb8540a001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ReplaceTextureWithSprite: {fileID: 0}
+  ReplaceTextureWithTexture: {fileID: 0}
+--- !u!95 &1046712782
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a705b24dbca074441b2715c6dfc5b57f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1046712783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6138f97f7bf4c28459d6b9b00bb42a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDamageMin: 0
+  DamageMin: 0
+  UseDamageMax: 0
+  DamageMax: 0
+  UseAlphaCountMin: 0
+  AlphaCountMin: 0
+  UseAlphaCountMax: 0
+  AlphaCountMax: 0
+  UseRemainingAlphaMin: 0
+  RemainingAlphaMin: 0
+  UseRemainingAlphaMax: 1
+  RemainingAlphaMax: .99000001
+  OnRequirementMet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1046712784}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1046712789}
+        m_MethodName: set_gravityScale
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1046712782}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dead
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1046712794}
+        m_MethodName: ReplaceTextureWith
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2800000, guid: 4c3ed67b3f3378f43a32fdc67e30bb3f,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  met: 0
+--- !u!114 &1046712784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8ec3a98dc00244aae8ba99e86bfd4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Acceleration: 5
+  MaximumSpeed: 2
+  SpeedBoost: 2.5
+  MinimumDistance: 1
+  Points:
+  - {x: -6, y: 1}
+  - {x: -4, y: 1}
+  - {x: -6, y: -1}
+  - {x: -4, y: -1}
+  targetPoint: {x: 0, y: 0}
+--- !u!114 &1046712785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6138f97f7bf4c28459d6b9b00bb42a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDamageMin: 0
+  DamageMin: 0
+  UseDamageMax: 0
+  DamageMax: 0
+  UseAlphaCountMin: 0
+  AlphaCountMin: 0
+  UseAlphaCountMax: 0
+  AlphaCountMax: 10
+  UseRemainingAlphaMin: 0
+  RemainingAlphaMin: 0
+  UseRemainingAlphaMax: 1
+  RemainingAlphaMax: .899999976
+  OnRequirementMet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1046712786}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  met: 0
+--- !u!114 &1046712786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fbcb04c243139438f8b0b3f28d0e81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Life: 3
+  Fade: 1
+  FadeDuration: 1
+  Shrink: 0
+  ShrinkDuration: 1
+  RandomizeOnEnable: 0
+  LifeMin: 3
+  LifeMax: 5
+  startColor: {r: 0, g: 0, b: 0, a: 0}
+  startLocalScale: {x: 0, y: 0, z: 0}
+--- !u!114 &1046712787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c5f1e1730d93a4880c460394961c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MassPerSolidPixel: .00999999978
+--- !u!114 &1046712788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3c1fd85e053f64ab748a5f998a9f45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &1046712789
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Mass: 61.0999985
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!114 &1046712790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17edb0917bef22a4e8ae01c185e2d25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsTrigger: 0
+  Material: {fileID: 0}
+  child: {fileID: 1243446711}
+  awoken: 1
+  CellSize: 64
+  Detail: .899999976
+  Weld: .00999999978
+  expectedCellSize: 0
+  expectedWidth: 0
+  expectedHeight: 0
+  cellWidth: 0
+  cellHeight: 0
+  cells:
+  - Collider: {fileID: 1243446715}
+  - Collider: {fileID: 1243446714}
+  - Collider: {fileID: 1243446713}
+  - Collider: {fileID: 1243446712}
+--- !u!114 &1046712791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee68f30327e7b8c49b456ba022e81845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &1046712792
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 5b00a7de0ddb01248a3ad80a9c634599, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1046712793
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Mesh: {fileID: 0}
+--- !u!114 &1046712794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1046712779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee430af1422046f4c8f35812bff0e6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnAlphaDataReplaced:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnAlphaDataModified:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dD2dRectEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnAlphaDataSubset:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dD2dRectEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnDamageChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dFloatFloatEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnStartSplit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnEndSplit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dDestructibleListEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MainTex: {fileID: 2800000, guid: 289f7f4484d558d4c93c19c5b4029220, type: 3}
+  DensityTex: {fileID: 0}
+  HealTex: {fileID: 0}
+  Indestructible: 0
+  RecordAlphaCount: 1
+  AutoSharpen: 1
+  AutoSplit: 1
+  SplitPixelsMin: 5
+  SplitExpand: -1
+  SplitFeather: 1
+  Sharpness: 1
+  color: {r: 1, g: 1, b: 1, a: 1}
+  damage: 0
+  textureRect:
+    serializedVersion: 2
+    x: .0546875
+    y: .1328125
+    width: .8984375
+    height: .7109375
+  originalRect:
+    serializedVersion: 2
+    x: -.519999981
+    y: -.469999999
+    width: 1.04999995
+    height: .909999967
+  alphaRect:
+    serializedVersion: 2
+    x: -.534807682
+    y: -.484777778
+    width: 1.06961536
+    height: .929555535
+  alphaWidth: 115
+  alphaHeight: 91
+  alphaCount: 6110
+  originalAlphaCount: 6110
+  alphaData: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001d6e6e6e6e6e6e6e1d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000086dbfffffffffffffffffffffbdb86000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006ef6fffffffffffffffffffffffffffffffffeae1d00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001de6fffffffffffffffffffffffffffffffffffffffffb6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055f6ffffffffffffffffffffffffffffffffffffffffffffffbf000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003af6ffffffffffffffffffffffffffffffffffffffffffffffffffae000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f6ffffffffffffffffffffffffffffffffffffffffffffffffffffff9b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffff55000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f6fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc1f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf00000000000000000000000000000000000000000000000000000000000000000000000000000000000000001d6e6e1d00000000000000000000000000000000000000000000000000000000000000efffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000000000000000000000000000000000000000000000000000000000000000000000000000006ee6fefffff61d000000000000000000000000000000000000000000000000000000000000feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf0000000000000000000000000000000000000000000000000000000000000000000000000000003aefffffffffffffe600000000000000000000000000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f0000000000000000000000000000000000000000000000000000000000000000000000003adbffffffffffffffffff9b0000000000006e6e6e6e6e6e6e5500000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9f000000000000000000000000000000000000000000000000000000000000000000000055fefffffffffffffffffffffb000086e6f6ffffffffffffffffffffefae480000000000000000000086ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef000000000000000000000000000000000000000000000000000000000000000000003afefffffffffffffffffffffffff6fbffffffffffffffffffffffffffffffffeb860f00000000000000ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000000000000000000000000000000000aefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff962000000000000f6ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f000000000000000000000000000000000000000000000000000000000000000000afffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeb3b0000003affffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaf00000000000000000000000000000000000000000000000000000000000000000056fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd550000ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf00000000000000000000000000000000000000000000000000000000000000000000eaffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff873afeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000000000000000000000000000000000000000000000000000000000000000004afffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f00000000000000000000000000000000000000000000000000000000000000000000cfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000000000000000000000000000000000002cfeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f0000000000000000000000000000000000000000000000000000000000000000000000c7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f0000000000000000000000000000000000000000000000000000000000000000000000dbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000000000000000000000000000000000000000000000000000000000000000efffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f0000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000000000000000000000000000000000000000000000000000000000000000dbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf0000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf000000000000000000000000000000000000000000000000000000000000000000dbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9f000000000000000000000000000000000000000000000000000000000000000000f6ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5f000000000000000000000000000000000000000000000000000000000000000055ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf0000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f0000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f000000000000000f3f3f3f3f2f00000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf000000003f6f9fcfffffffffffffcf2f0000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f5f8fbfffffffffffffffffffffffffff2f000000000000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf000000000000000000000000000000000000efffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0f0000000000000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000086ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0f0000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaf1f00000000000000000000000000000000000047ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000000000000000000000004f8fdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf0f000000000000000000004f9fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff4f000000000000001f8fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6f0000000000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000008fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef00000000005fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaf000000001fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6f000000003fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2f000000002fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf000000000000dfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9f0000000000004fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5f00000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f000000000000003fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf0000000000000000009fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f0000000000000000001fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf9f5f2f1fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff4f000000000000000000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf8f1f00000000000f8fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0f000000000000000000000feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe9d7f7f7f7f7f7f7f7f4f3f2f000000000000000000000000003f7fecffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf0000000000000000000000005fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf00000000000000000000000000000000000000000000000000000000a0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f00000000000000000000000086fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb0000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6e000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef0000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf0000000000000000000000000055ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3a000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f0000000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf0000000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef1f0000000000000000000000000000009bfefffffffffffffffffffffffffffffffffffffffffffffffffffb1d000000000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5f00000000000000000000000000000000001dedffffffffffffffffffffffffffffffffffffffffffffffff860000000000000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf4f000000000000000000000000000000000000001ff6ffffffffffffffffffffffffffffffffffffffffffffef00000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffffffffffffffe7f3f3f3f3f2f000000000000000000000000000000000000000000003fefffffffffffffffffffffffffffffffffffffffffff550000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffffffffffe5500000000000000000000000000000000000000000000000000000000000f8fc7f3ffffffffffffffffffffffffffffffffffdb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffffffe55000000000000000000000000000000000000000000000000000000000000000000003aefffffffffffffffffffffffffffffff3a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffe550000000000000000000000000000000000000000000000000000000000000000000000000086fbffffffffffffffffffffffffae0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000aefffffffffffffffffffffffffe550000000000000000000000000000000000000000000000000000000000000000000000000000001dbffeffffffffffffffffffdb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000dbfffffffffffffffffffffe550000000000000000000000000000000000000000000000000000000000000000000000000000000000003ae6ffffffffffffffdb0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfeffffffffffffffff6e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000aefbffffffef6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001ddbfffffffffffb6e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001d6e6e6e55000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  alphaScale: {x: 1.0926317, y: 1.37700212}
+  alphaOffset: {x: .0420172177, y: .121267356}
+--- !u!1 &1230218916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1230218921}
+  - 60: {fileID: 1230218920}
+  - 60: {fileID: 1230218919}
+  - 60: {fileID: 1230218918}
+  - 60: {fileID: 1230218917}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &1230218917
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1230218916}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 64.0019608, y: 64.5}
+      - {x: 64.5, y: 64.0019608}
+      - {x: 110.5, y: 64.3050308}
+      - {x: 110.694969, y: 64.5}
+      - {x: 106.293747, y: 78.5}
+      - {x: 104.5, y: 79.9260101}
+      - {x: 98.5, y: 80.4921875}
+      - {x: 90.5, y: 87.9900436}
+      - {x: 84.5, y: 87.9155273}
+      - {x: 65.5, y: 71.1614609}
+      - {x: 64.5, y: 70.9644318}
+      - {x: 64.0355682, y: 70.5}
+--- !u!60 &1230218918
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1230218916}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 2.07399106, y: 64.5}
+      - {x: 2.5, y: 64.0739899}
+      - {x: 63.5, y: 64.0019608}
+      - {x: 63.9980392, y: 64.5}
+      - {x: 63.6048965, y: 70.5}
+      - {x: 63.5, y: 70.6048965}
+      - {x: 61.5, y: 69.0669632}
+      - {x: 40.5, y: 71.6847153}
+      - {x: 30.5, y: 86.9155273}
+      - {x: 28.5, y: 87.9644318}
+      - {x: 23.5, y: 87.7643661}
+      - {x: 7.17015696, y: 77.5}
+      - {x: 6.17015696, y: 75.5}
+      - {x: 6.70625019, y: 72.5}
+      - {x: 2.5, y: 65.1597214}
+--- !u!60 &1230218919
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1230218916}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 65.4552231, y: 2.5}
+      - {x: 79.5, y: 2.4552238}
+      - {x: 88.6741943, y: 10.5}
+      - {x: 92.6048965, y: 42.5}
+      - {x: 91.8125, y: 45.5}
+      - {x: 92.5, y: 45.7062492}
+      - {x: 106.5, y: 44.1183586}
+      - {x: 108.829842, y: 46.5}
+      - {x: 108.998039, y: 52.5}
+      - {x: 111.956734, y: 55.5}
+      - {x: 110.92601, y: 63.5}
+      - {x: 110.5, y: 63.9260101}
+      - {x: 64.5, y: 63.9980392}
+      - {x: 64.0019608, y: 63.5}
+      - {x: 64.0019608, y: 3.5}
+      - {x: 64.5, y: 3.00196075}
+--- !u!60 &1230218920
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1230218916}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 62.6323547, y: 3.5}
+      - {x: 63.5, y: 3.02032518}
+      - {x: 63.9796753, y: 3.5}
+      - {x: 63.9980392, y: 63.5}
+      - {x: 63.5, y: 63.9980392}
+      - {x: 2.5, y: 63.9980392}
+      - {x: 1.88942313, y: 63.5}
+      - {x: 1.93303573, y: 61.5}
+      - {x: 14.809783, y: 54.5}
+      - {x: 12.3258066, y: 35.5}
+      - {x: 15.1432161, y: 28.5}
+      - {x: 12.2314281, y: 22.5}
+      - {x: 12.2356319, y: 21.5}
+      - {x: 15.5, y: 18.0844746}
+      - {x: 16.5, y: 17.8553295}
+      - {x: 22.5, y: 15.6241379}
+      - {x: 23.5, y: 15.9562216}
+      - {x: 26.5, y: 20.0203247}
+      - {x: 27.5, y: 20.0099602}
+      - {x: 42.5, y: 19.2356319}
+      - {x: 52.5, y: 24.8626938}
+      - {x: 52.8571434, y: 24.5}
+      - {x: 55.3258057, y: 13.5}
+      - {x: 55.9380531, y: 12.5}
+      - {x: 56.3258057, y: 10.5}
+      - {x: 61.5, y: 4.05652189}
+      - {x: 62.5, y: 3.62413788}
+--- !u!4 &1230218921
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1230218916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.534807682, y: -.484777778, z: 0}
+  m_LocalScale: {x: .00930100307, y: .0102148959, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1742524741}
+  m_RootOrder: 0
+--- !u!1 &1243446711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1243446716}
+  - 60: {fileID: 1243446715}
+  - 60: {fileID: 1243446714}
+  - 60: {fileID: 1243446713}
+  - 60: {fileID: 1243446712}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!60 &1243446712
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243446711}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 64.0019608, y: 64.5}
+      - {x: 64.5, y: 64.0019608}
+      - {x: 110.5, y: 64.3050308}
+      - {x: 110.694969, y: 64.5}
+      - {x: 106.293747, y: 78.5}
+      - {x: 104.5, y: 79.9260101}
+      - {x: 98.5, y: 80.4921875}
+      - {x: 90.5, y: 87.9900436}
+      - {x: 84.5, y: 87.9155273}
+      - {x: 65.5, y: 71.1614609}
+      - {x: 64.5, y: 70.9644318}
+      - {x: 64.0355682, y: 70.5}
+--- !u!60 &1243446713
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243446711}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 2.07399106, y: 64.5}
+      - {x: 2.5, y: 64.0739899}
+      - {x: 63.5, y: 64.0019608}
+      - {x: 63.9980392, y: 64.5}
+      - {x: 63.6048965, y: 70.5}
+      - {x: 63.5, y: 70.6048965}
+      - {x: 61.5, y: 69.0669632}
+      - {x: 40.5, y: 71.6847153}
+      - {x: 30.5, y: 86.9155273}
+      - {x: 28.5, y: 87.9644318}
+      - {x: 23.5, y: 87.7643661}
+      - {x: 7.17015696, y: 77.5}
+      - {x: 6.17015696, y: 75.5}
+      - {x: 6.70625019, y: 72.5}
+      - {x: 2.5, y: 65.1597214}
+--- !u!60 &1243446714
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243446711}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 65.4552231, y: 2.5}
+      - {x: 79.5, y: 2.4552238}
+      - {x: 88.6741943, y: 10.5}
+      - {x: 92.6048965, y: 42.5}
+      - {x: 91.8125, y: 45.5}
+      - {x: 92.5, y: 45.7062492}
+      - {x: 106.5, y: 44.1183586}
+      - {x: 108.829842, y: 46.5}
+      - {x: 108.998039, y: 52.5}
+      - {x: 111.956734, y: 55.5}
+      - {x: 110.92601, y: 63.5}
+      - {x: 110.5, y: 63.9260101}
+      - {x: 64.5, y: 63.9980392}
+      - {x: 64.0019608, y: 63.5}
+      - {x: 64.0019608, y: 3.5}
+      - {x: 64.5, y: 3.00196075}
+--- !u!60 &1243446715
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243446711}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 62.6323547, y: 3.5}
+      - {x: 63.5, y: 3.02032518}
+      - {x: 63.9796753, y: 3.5}
+      - {x: 63.9980392, y: 63.5}
+      - {x: 63.5, y: 63.9980392}
+      - {x: 2.5, y: 63.9980392}
+      - {x: 1.88942313, y: 63.5}
+      - {x: 1.93303573, y: 61.5}
+      - {x: 14.809783, y: 54.5}
+      - {x: 12.3258066, y: 35.5}
+      - {x: 15.1432161, y: 28.5}
+      - {x: 12.2314281, y: 22.5}
+      - {x: 12.2356319, y: 21.5}
+      - {x: 15.5, y: 18.0844746}
+      - {x: 16.5, y: 17.8553295}
+      - {x: 22.5, y: 15.6241379}
+      - {x: 23.5, y: 15.9562216}
+      - {x: 26.5, y: 20.0203247}
+      - {x: 27.5, y: 20.0099602}
+      - {x: 42.5, y: 19.2356319}
+      - {x: 52.5, y: 24.8626938}
+      - {x: 52.8571434, y: 24.5}
+      - {x: 55.3258057, y: 13.5}
+      - {x: 55.9380531, y: 12.5}
+      - {x: 56.3258057, y: 10.5}
+      - {x: 61.5, y: 4.05652189}
+      - {x: 62.5, y: 3.62413788}
+--- !u!4 &1243446716
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243446711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.534807682, y: -.484777778, z: 0}
+  m_LocalScale: {x: .00930100307, y: .0102148959, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1046712780}
+  m_RootOrder: 0
+--- !u!1 &1281053349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1281053354}
+  - 20: {fileID: 1281053353}
+  - 92: {fileID: 1281053352}
+  - 124: {fileID: 1281053351}
+  - 81: {fileID: 1281053350}
+  - 114: {fileID: 1281053355}
+  - 114: {fileID: 1281053356}
+  - 114: {fileID: 1281053358}
+  - 114: {fileID: 1281053357}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1281053350
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281053349}
+  m_Enabled: 1
+--- !u!124 &1281053351
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281053349}
+  m_Enabled: 1
+--- !u!92 &1281053352
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281053349}
+  m_Enabled: 1
+--- !u!20 &1281053353
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281053349}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: .566176474, g: .784584045, b: 1, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: -100
+  far clip plane: 100
+  field of view: 60
+  orthographic: 1
+  orthographic size: 6
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
+--- !u!4 &1281053354
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281053349}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1036553459}
+  m_RootOrder: 0
+--- !u!114 &1281053355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281053349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09b491a1b4dc6a49a68bbf26ef11897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shake: 0
+  ShakeDampening: 10
+  ShakeScale: 1
+  ShakeSpeed: 10
+  offsetX: 896.993164
+  offsetY: -214.110229
+--- !u!114 &1281053356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281053349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bab4a20fdec683409a5965af0d907ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Requires: 323
+  Intercept: 0
+  Prefab: {fileID: 100000, guid: 092aeef3857c50f41ada30e877c781cd, type: 2}
+--- !u!114 &1281053357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281053349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa02e92eaa2e97428ea4d7bb85853c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Header: 'This shows how you can animate a destructible object''s sprite via the
+    D2dAnimator component being driven by an animation
+
+    NOTE: The AlphaTex of the bee is a combination of all the frames'
+  Footer: 'Left Click = Spawn Explosion
+
+    Right Click + Drag = Slice'
+--- !u!114 &1281053358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281053349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a1a95ff19d04e40be194c30cdde651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Requires: 324
+  Intercept: 0
+  IndicatorPrefab: {fileID: 120936, guid: 12214d88c46362c428f871b215df6ea4, type: 2}
+  StampTex: {fileID: 2800000, guid: 6a07acbd4953fd744bc712a370a7d51e, type: 3}
+  Hardness: 1
+  Thickness: .25
+  down: 0
+  startMousePosition: {x: 0, y: 0, z: 0}
+  indicatorInstance: {fileID: 0}
+--- !u!1 &1742524726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1742524741}
+  - 114: {fileID: 1742524740}
+  - 33: {fileID: 1742524739}
+  - 23: {fileID: 1742524738}
+  - 114: {fileID: 1742524737}
+  - 114: {fileID: 1742524736}
+  - 50: {fileID: 1742524735}
+  - 114: {fileID: 1742524734}
+  - 114: {fileID: 1742524733}
+  - 114: {fileID: 1742524732}
+  - 114: {fileID: 1742524731}
+  - 114: {fileID: 1742524730}
+  - 114: {fileID: 1742524729}
+  - 95: {fileID: 1742524728}
+  - 114: {fileID: 1742524727}
+  m_Layer: 0
+  m_Name: Bee 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1742524727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fcb9109814544f4c94fbbeb8540a001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ReplaceTextureWithSprite: {fileID: 0}
+  ReplaceTextureWithTexture: {fileID: 0}
+--- !u!95 &1742524728
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a705b24dbca074441b2715c6dfc5b57f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1742524729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6138f97f7bf4c28459d6b9b00bb42a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDamageMin: 0
+  DamageMin: 0
+  UseDamageMax: 0
+  DamageMax: 0
+  UseAlphaCountMin: 0
+  AlphaCountMin: 0
+  UseAlphaCountMax: 0
+  AlphaCountMax: 0
+  UseRemainingAlphaMin: 0
+  RemainingAlphaMin: 0
+  UseRemainingAlphaMax: 1
+  RemainingAlphaMax: .99000001
+  OnRequirementMet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1742524730}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1742524735}
+        m_MethodName: set_gravityScale
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1742524728}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dead
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1742524740}
+        m_MethodName: ReplaceTextureWith
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2800000, guid: 4c3ed67b3f3378f43a32fdc67e30bb3f,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Texture2D, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  met: 0
+--- !u!114 &1742524730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8ec3a98dc00244aae8ba99e86bfd4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Acceleration: 5
+  MaximumSpeed: 2
+  SpeedBoost: 2.5
+  MinimumDistance: 1
+  Points:
+  - {x: 4, y: 1}
+  - {x: 6, y: 1}
+  - {x: 4, y: -1}
+  - {x: 6, y: -1}
+  targetPoint: {x: 0, y: 0}
+--- !u!114 &1742524731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6138f97f7bf4c28459d6b9b00bb42a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDamageMin: 0
+  DamageMin: 0
+  UseDamageMax: 0
+  DamageMax: 0
+  UseAlphaCountMin: 0
+  AlphaCountMin: 0
+  UseAlphaCountMax: 0
+  AlphaCountMax: 10
+  UseRemainingAlphaMin: 0
+  RemainingAlphaMin: 0
+  UseRemainingAlphaMax: 1
+  RemainingAlphaMax: .899999976
+  OnRequirementMet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1742524732}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  met: 0
+--- !u!114 &1742524732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fbcb04c243139438f8b0b3f28d0e81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Life: 3
+  Fade: 1
+  FadeDuration: 1
+  Shrink: 0
+  ShrinkDuration: 1
+  RandomizeOnEnable: 0
+  LifeMin: 3
+  LifeMax: 5
+  startColor: {r: 0, g: 0, b: 0, a: 0}
+  startLocalScale: {x: 0, y: 0, z: 0}
+--- !u!114 &1742524733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c5f1e1730d93a4880c460394961c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MassPerSolidPixel: .00999999978
+--- !u!114 &1742524734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3c1fd85e053f64ab748a5f998a9f45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &1742524735
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Mass: 61.0999985
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!114 &1742524736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17edb0917bef22a4e8ae01c185e2d25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsTrigger: 0
+  Material: {fileID: 0}
+  child: {fileID: 1230218916}
+  awoken: 1
+  CellSize: 64
+  Detail: .899999976
+  Weld: .00999999978
+  expectedCellSize: 0
+  expectedWidth: 0
+  expectedHeight: 0
+  cellWidth: 0
+  cellHeight: 0
+  cells:
+  - Collider: {fileID: 1230218920}
+  - Collider: {fileID: 1230218919}
+  - Collider: {fileID: 1230218918}
+  - Collider: {fileID: 1230218917}
+--- !u!114 &1742524737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee68f30327e7b8c49b456ba022e81845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &1742524738
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 5b00a7de0ddb01248a3ad80a9c634599, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1742524739
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Mesh: {fileID: 0}
+--- !u!114 &1742524740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee430af1422046f4c8f35812bff0e6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnAlphaDataReplaced:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnAlphaDataModified:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dD2dRectEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnAlphaDataSubset:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dD2dRectEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnDamageChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dFloatFloatEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnStartSplit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnEndSplit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Destructible2D.D2dDestructibleListEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MainTex: {fileID: 2800000, guid: 289f7f4484d558d4c93c19c5b4029220, type: 3}
+  DensityTex: {fileID: 0}
+  HealTex: {fileID: 0}
+  Indestructible: 0
+  RecordAlphaCount: 1
+  AutoSharpen: 1
+  AutoSplit: 1
+  SplitPixelsMin: 5
+  SplitExpand: -1
+  SplitFeather: 1
+  Sharpness: 1
+  color: {r: 1, g: 1, b: 1, a: 1}
+  damage: 0
+  textureRect:
+    serializedVersion: 2
+    x: .0546875
+    y: .1328125
+    width: .8984375
+    height: .7109375
+  originalRect:
+    serializedVersion: 2
+    x: -.519999981
+    y: -.469999999
+    width: 1.04999995
+    height: .909999967
+  alphaRect:
+    serializedVersion: 2
+    x: -.534807682
+    y: -.484777778
+    width: 1.06961536
+    height: .929555535
+  alphaWidth: 115
+  alphaHeight: 91
+  alphaCount: 6110
+  originalAlphaCount: 6110
+  alphaData: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001d6e6e6e6e6e6e6e1d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000086dbfffffffffffffffffffffbdb86000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006ef6fffffffffffffffffffffffffffffffffeae1d00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001de6fffffffffffffffffffffffffffffffffffffffffb6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055f6ffffffffffffffffffffffffffffffffffffffffffffffbf000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003af6ffffffffffffffffffffffffffffffffffffffffffffffffffae000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f6ffffffffffffffffffffffffffffffffffffffffffffffffffffff9b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffff55000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f6fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc1f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf00000000000000000000000000000000000000000000000000000000000000000000000000000000000000001d6e6e1d00000000000000000000000000000000000000000000000000000000000000efffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000000000000000000000000000000000000000000000000000000000000000000000000000006ee6fefffff61d000000000000000000000000000000000000000000000000000000000000feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf0000000000000000000000000000000000000000000000000000000000000000000000000000003aefffffffffffffe600000000000000000000000000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f0000000000000000000000000000000000000000000000000000000000000000000000003adbffffffffffffffffff9b0000000000006e6e6e6e6e6e6e5500000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9f000000000000000000000000000000000000000000000000000000000000000000000055fefffffffffffffffffffffb000086e6f6ffffffffffffffffffffefae480000000000000000000086ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef000000000000000000000000000000000000000000000000000000000000000000003afefffffffffffffffffffffffff6fbffffffffffffffffffffffffffffffffeb860f00000000000000ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000000000000000000000000000000000aefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff962000000000000f6ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f000000000000000000000000000000000000000000000000000000000000000000afffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffeb3b0000003affffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaf00000000000000000000000000000000000000000000000000000000000000000056fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd550000ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf00000000000000000000000000000000000000000000000000000000000000000000eaffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff873afeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff000000000000000000000000000000000000000000000000000000000000000000004afffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f00000000000000000000000000000000000000000000000000000000000000000000cfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000000000000000000000000000000000002cfeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f0000000000000000000000000000000000000000000000000000000000000000000000c7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f0000000000000000000000000000000000000000000000000000000000000000000000dbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000000000000000000000000000000000000000000000000000000000000000efffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f0000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000000000000000000000000000000000000000000000000000000000000000dbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf0000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf000000000000000000000000000000000000000000000000000000000000000000dbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9f000000000000000000000000000000000000000000000000000000000000000000f6ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f000000000000000000000000000000000000000000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5f000000000000000000000000000000000000000000000000000000000000000055ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf0000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f0000000000000000000000000000000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f000000000000000f3f3f3f3f2f00000000000000000000000000000000000000006effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf000000003f6f9fcfffffffffffffcf2f0000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f5f8fbfffffffffffffffffffffffffff2f000000000000000000000000000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf000000000000000000000000000000000000efffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0f0000000000000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000086ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0f0000000000000000000000000000000000001dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000000000000000000000000000000000000ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaf1f00000000000000000000000000000000000047ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000000000000000000000004f8fdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf0f000000000000000000004f9fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff4f000000000000001f8fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6f0000000000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f00000000008fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef00000000005fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffaf000000001fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6f000000003fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2f000000002fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf000000000000dfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9f0000000000004fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5f00000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1f000000000000003fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf0000000000000000009fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f0000000000000000001fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf9f5f2f1fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff4f000000000000000000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf8f1f00000000000f8fefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0f000000000000000000000feffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe9d7f7f7f7f7f7f7f7f4f3f2f000000000000000000000000003f7fecffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcf0000000000000000000000005fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf00000000000000000000000000000000000000000000000000000000a0ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f00000000000000000000000086fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb0000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6e000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef0000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf0000000000000000000000000055ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3a000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8f0000000000000000000000000000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffbf0000000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffef1f0000000000000000000000000000009bfefffffffffffffffffffffffffffffffffffffffffffffffffffb1d000000000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5f00000000000000000000000000000000001dedffffffffffffffffffffffffffffffffffffffffffffffff860000000000000000000000000000000000000000000000000000000000000000000000000000009bffffffffffffffffffffffffffffffffffffffffffffffffffffffffdf4f000000000000000000000000000000000000001ff6ffffffffffffffffffffffffffffffffffffffffffffef00000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffffffffffffffe7f3f3f3f3f2f000000000000000000000000000000000000000000003fefffffffffffffffffffffffffffffffffffffffffff550000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffffffffffe5500000000000000000000000000000000000000000000000000000000000f8fc7f3ffffffffffffffffffffffffffffffffffdb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffffffe55000000000000000000000000000000000000000000000000000000000000000000003aefffffffffffffffffffffffffffffff3a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfffffffffffffffffffffffffffffe550000000000000000000000000000000000000000000000000000000000000000000000000086fbffffffffffffffffffffffffae0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000aefffffffffffffffffffffffffe550000000000000000000000000000000000000000000000000000000000000000000000000000001dbffeffffffffffffffffffdb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000dbfffffffffffffffffffffe550000000000000000000000000000000000000000000000000000000000000000000000000000000000003ae6ffffffffffffffdb0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009bfeffffffffffffffff6e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000aefbffffffef6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001ddbfffffffffffb6e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001d6e6e6e55000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  alphaScale: {x: 1.0926317, y: 1.37700212}
+  alphaOffset: {x: .0420172177, y: .121267356}
+--- !u!4 &1742524741
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742524726}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1230218921}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
