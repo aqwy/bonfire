@@ -15,7 +15,7 @@ public class Singltone<T> : MonoBehaviour where T : MonoBehaviour
                 _Instance = FindObjectOfType<T>();
             }
 
-            if (_Instance)
+            if (!_Instance)
             {
                 Debug.Log("Cant find " + typeof(T));
             }

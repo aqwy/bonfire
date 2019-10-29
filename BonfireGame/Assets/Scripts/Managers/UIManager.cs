@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UIManager : Singltone<UIManager>
 {
@@ -10,25 +11,44 @@ public class UIManager : Singltone<UIManager>
     public RectTransform gamePlayPanel;
     public GameObject gameplayElements;
 
+    public Animator inventoryAnim;
+    public Animator settingsUIAnim;
+
+    private bool _openInventoryUI = true;
+
+
     public void openInventory()
     {
-        Animator animator = inventoryPanel.GetComponent<Animator>();
-        if (animator)
+        if (inventoryAnim)
         {
-            bool openInventoryUI = animator.GetBool("OpenInventory");
-            animator.SetBool("OpenInventory", !openInventoryUI);
+            _openInventoryUI = inventoryAnim.GetBool("OpenInventory");
+            inventoryAnim.SetBool("OpenInventory", !_openInventoryUI);
         }
     }
 
     public void openMainMenu()
     {
-        Animator animator = mainMenuPanel.GetComponent<Animator>();
-        if (animator)
+        if (settingsUIAnim)
         {
-            bool openMainMenuUI = animator.GetBool("OpenMainMenu");
+            bool openMainMenuUI = settingsUIAnim.GetBool("OpenMainMenu");
             gamePlayPanel.gameObject.SetActive(openMainMenuUI);
+
+            if (!_openInventoryUI)
+            {
+                Debug.Log("need close inventory");
+                StartCoroutine(closeInventory());
+            }
+
             gameplayElements.gameObject.SetActive(openMainMenuUI);
-            animator.SetBool("OpenMainMenu", !openMainMenuUI);
+            settingsUIAnim.SetBool("OpenMainMenu", !openMainMenuUI);
         }
+    }
+
+
+
+    IEnumerator closeInventory()
+    {
+        openInventory();
+        yield return new WaitForSeconds(0.2f);
     }
 }
