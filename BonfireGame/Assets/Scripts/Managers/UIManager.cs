@@ -44,8 +44,6 @@ public class UIManager : Singltone<UIManager>
         }
     }
 
-
-
     IEnumerator closeInventory()
     {
         openInventory();

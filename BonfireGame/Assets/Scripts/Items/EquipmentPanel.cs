@@ -7,9 +7,27 @@ public class EquipmentPanel : MonoBehaviour
     [SerializeField] private Transform equpmentSlotParent;
     [SerializeField] private EquipmentSlot[] equipmentSlots;
 
+    private Equippableitem _currentSlotItem;
+    public Equippableitem CurrentSlotItem
+    {
+        get
+        {
+            return _currentSlotItem;
+        }
+        set
+        {
+            _currentSlotItem = value;
+        }
+    }
+
     private void OnValidate()
     {
         equipmentSlots = equpmentSlotParent.GetComponentsInChildren<EquipmentSlot>();
+    }
+
+    private void Start()
+    {
+
     }
 
     public bool addItem(Equippableitem equippableitem, out Equippableitem previousItem)
@@ -20,6 +38,8 @@ public class EquipmentPanel : MonoBehaviour
             {
                 previousItem = (Equippableitem)equipmentSlots[i].Item;
                 equipmentSlots[i].Item = equippableitem;
+                _currentSlotItem = equippableitem;
+                Debug.Log("active slot " + CurrentSlotItem.effecttype);
                 return true;
             }
         }
@@ -38,5 +58,18 @@ public class EquipmentPanel : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public Equippableitem getCurrentItem()
+    {
+        if (!CurrentSlotItem)
+        {
+            Debug.Log("empty active slot");
+            return null;
+        }
+        else
+        {
+            return CurrentSlotItem;
+        }
     }
 }

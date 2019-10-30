@@ -5,6 +5,13 @@ using UnityEngine;
 
 public enum equipmentType
 {
+    individual,
+    special,
+    all
+}
+
+public enum effectType
+{
     slice,
     connect,
     crush
@@ -14,5 +21,6 @@ public enum equipmentType
 public class Equippableitem : Item
 {
     public equipmentType equipmenttype;
+    public effectType effecttype;
 }
 

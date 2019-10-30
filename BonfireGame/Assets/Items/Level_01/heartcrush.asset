@@ -15,3 +15,4 @@ MonoBehaviour:
   itemName: heartcrush
   icon: {fileID: -7777234183341541081, guid: 6297f8ad6ce52324587ebf2719b406b0, type: 3}
   equipmenttype: 2
+  effecttype: 2

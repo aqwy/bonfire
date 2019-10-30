@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf77d3947534d84db809c74239d0a43, type: 3}
   m_Name: slideDiamond
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: slideDiamond
   icon: {fileID: -7110247949694541051, guid: 6297f8ad6ce52324587ebf2719b406b0, type: 3}
-  equipmenttype: 0
+  equipmenttype: 2
+  effecttype: 0

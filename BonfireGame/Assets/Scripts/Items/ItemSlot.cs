@@ -41,6 +41,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
             if (Item != null && onRightClickEvent != null)
             {
                 onRightClickEvent(Item);
+                GameManager.Instance.setInteractive();
             }
         }
     }
