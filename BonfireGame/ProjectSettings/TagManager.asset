@@ -6,6 +6,9 @@ TagManager:
   tags:
   - slice
   - connect
+  - shoot
+  - explosion
+  - nothing
   layers:
   - Default
   - TransparentFX
@@ -40,6 +43,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2595729445
+    locked: 0
+  - name: Midground
+    uniqueID: 861608299
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 3357228937
     locked: 0

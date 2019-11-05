@@ -20,7 +20,7 @@ public class GameManager : Singltone<GameManager>
 
     void Update()
     {
-        getWinReward();
+        
     }
     private void setupStarting()
     {
@@ -64,13 +64,20 @@ public class GameManager : Singltone<GameManager>
         }
         else
         {
+            bool findIntractive = false;
             for (int i = 0; i < levelInteractiveElements.Length; i++)
             {
                 if (item.effecttype.ToString() == levelInteractiveElements[i].tag)
                 {
                     closeInteractive();
                     levelInteractiveElements[i].SetActive(true);
+                    findIntractive = true;
+                    break;
                 }
+            }
+            if (!findIntractive)
+            {
+                closeInteractive();
             }
         }
     }
@@ -103,14 +110,15 @@ public class GameManager : Singltone<GameManager>
             winRewardMenu.SetActive(true);
         }
     }
-    public void testStartSplit()
+    public bool getIteractIconStatus()
     {
-        int test = 0;
-        Debug.Log("splited " +test++);
-    }
-
-    public void testEndSplit()
-    {
-        Debug.Log("end splited");
+        for (int i = 0; i < _winConditionsKeys.Length - 1; i++)
+        {
+            if(_winConditionsKeys[i] == false)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

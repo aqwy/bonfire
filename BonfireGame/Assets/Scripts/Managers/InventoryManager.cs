@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class InventoryManager : Singltone<InventoryManager>
 {
-    [SerializeField] private Inventory inventory;
+    public Inventory inventory;
     [SerializeField] private EquipmentPanel equipmentPanel;
 
     private void Awake()

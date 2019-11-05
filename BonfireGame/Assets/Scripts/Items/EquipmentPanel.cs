@@ -54,6 +54,7 @@ public class EquipmentPanel : MonoBehaviour
             if (equipmentSlots[i].Item == equippableitem)
             {
                 equipmentSlots[i].Item = null;
+                CurrentSlotItem = null;
                 return true;
             }
         }

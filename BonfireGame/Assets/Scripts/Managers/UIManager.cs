@@ -9,20 +9,43 @@ public class UIManager : Singltone<UIManager>
     public RectTransform inventoryPanel;
     public RectTransform mainMenuPanel;
     public RectTransform gamePlayPanel;
+    public RectTransform fadePanel;
+    public RectTransform newItemSignPanel;
     public GameObject gameplayElements;
 
     public Animator inventoryAnim;
     public Animator settingsUIAnim;
+    public Animator fadeAnim;
 
     private bool _openInventoryUI = true;
 
+    private void Start()
+    {
+        newItemSignPanel.gameObject.SetActive(false);
+    }
+
+    public void fadeInUI(bool state)
+    {
+        if (fadeAnim)
+        {
+            fadeAnim.SetBool("FadeIn", state);
+        }
+    }
 
     public void openInventory()
     {
         if (inventoryAnim)
         {
             _openInventoryUI = inventoryAnim.GetBool("OpenInventory");
-            inventoryAnim.SetBool("OpenInventory", !_openInventoryUI);
+            gameplayElements.gameObject.SetActive(_openInventoryUI);
+            fadeInUI(!_openInventoryUI);
+
+            inventoryAnim.SetBool("OpenInventory", !_openInventoryUI);          
+        }
+
+        if(newItemSignPanel.gameObject.activeInHierarchy)
+        {
+            newItemSignPanel.gameObject.SetActive(false);
         }
     }
 
@@ -31,6 +54,7 @@ public class UIManager : Singltone<UIManager>
         if (settingsUIAnim)
         {
             bool openMainMenuUI = settingsUIAnim.GetBool("OpenMainMenu");
+            fadeInUI(!openMainMenuUI);
             gamePlayPanel.gameObject.SetActive(openMainMenuUI);
 
             if (!_openInventoryUI)
@@ -44,7 +68,8 @@ public class UIManager : Singltone<UIManager>
         }
     }
 
-    IEnumerator closeInventory()
+
+    private IEnumerator closeInventory()
     {
         openInventory();
         yield return new WaitForSeconds(0.2f);

@@ -6,11 +6,17 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class ItemSlot : MonoBehaviour, IPointerClickHandler
+public class ItemSlot : MonoBehaviour, IPointerClickHandler,IPointerEnterHandler,IPointerExitHandler
 {
     [SerializeField] private Image _imageItem;
 
     public event Action<Item> onRightClickEvent;
+
+    protected Color normalColor = Color.white;
+    protected Color disabledColor = new Color(1, 1, 1, 0);
+
+    private Outline _outline;
+    private Vector2 _imageScale;
 
     private Item _Item;
     public Item Item
@@ -24,16 +30,22 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
             _Item = value;
             if (!_Item)
             {
-                _imageItem.enabled = false;
+                _imageItem.sprite = null;
+                _imageItem.color = disabledColor;
             }
+
             else
             {
                 _imageItem.sprite = _Item.icon;
-                _imageItem.enabled = true;
+                _imageItem.color = normalColor;
             }
         }
     }
-
+    private void Start()
+    {
+        _outline = GetComponent<Outline>();
+        _imageScale = _imageItem.rectTransform.localScale;
+    }
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData != null && eventData.button == PointerEventData.InputButton.Right)
@@ -52,5 +64,18 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         {
             _imageItem = GetComponent<Image>();
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("ui slot enter: " + gameObject.name);
+        _imageItem.rectTransform.localScale = new Vector2(1.2f, 1.2f);
+        _outline.enabled = true;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        _imageItem.rectTransform.localScale = _imageScale;
+        _outline.enabled = false;
     }
 }

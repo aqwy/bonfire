@@ -4,37 +4,50 @@ using UnityEngine;
 
 public class Spikes : MonoBehaviour
 {
-    private int _leftSpikesCount = 0;
-    private int _rightSpikesCount = 0;
+    [SerializeField] private BigBushCount bushCount;
+    private int _leftSpikesCount;
+    private int _rightSpikesCount;
+    private int _childCount;
+    
+    private void Start()
+    {
+        _leftSpikesCount = 0;
+        _rightSpikesCount = 0;
+        _childCount = GetComponentsInChildren<spikesCounter>().Length;
+    }
 
     public void leftSpikeBeveled()
     {
         _leftSpikesCount++;
         getLeftSpikeBeveled();
-        Debug.Log("spkikov left srezno: " + _leftSpikesCount);
-        gameObject.SetActive(false);
+        Debug.Log("spkikov left srezno: " + _leftSpikesCount + " iz: " + _childCount);
     }
     public void rightSpikeBeveled()
     {
         _rightSpikesCount++;
         getRightSpikeBeveled();
-        Debug.Log("spkikov right srezno: " + _rightSpikesCount);
+        Debug.Log("spkikov right srezno: " + _rightSpikesCount + " iz: " + _childCount);
     }
 
     private void getLeftSpikeBeveled()
     {
-        if (_leftSpikesCount == 3)
+        if (_leftSpikesCount == _childCount)
         {
             GameManager.Instance.addWinKey();
-            
+            bushCount.newItemCount++;
+            bushCount.checkNewItem();
+            Debug.Log("add win key for left");
         }
     }
 
     private void getRightSpikeBeveled()
     {
-        if (_rightSpikesCount == 3)
+        if (_rightSpikesCount == _childCount)
         {
             GameManager.Instance.addWinKey();
+            bushCount.newItemCount++;
+            bushCount.checkNewItem();
+            Debug.Log("add win key for right");
         }
-    }
+    }   
 }

@@ -12,9 +12,13 @@ public enum equipmentType
 
 public enum effectType
 {
-    slice,
+    nothing,
+    activator,
+    slice,  
     connect,
-    crush
+    crush,
+    shoot,
+    explosion
 }
 
 [CreateAssetMenu]
