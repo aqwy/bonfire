@@ -83,6 +83,8 @@ public class InteractWithFire : MonoBehaviour, IPointerEnterHandler, IPointerExi
                 {
                     GameManager.Instance.addWinKey();
                     GameManager.Instance.getWinReward();
+                    winIteractSprite.gameObject.SetActive(false);
+                    this.enabled = false;
                 }
             }
         }

@@ -9,6 +9,7 @@ TagManager:
   - shoot
   - explosion
   - nothing
+  - crush
   layers:
   - Default
   - TransparentFX

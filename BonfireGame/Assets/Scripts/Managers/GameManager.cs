@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class GameManager : Singltone<GameManager>
 {
@@ -8,6 +9,10 @@ public class GameManager : Singltone<GameManager>
     public EquipmentPanel activeItem;
     public int winKeysCount;
     public GameObject winRewardMenu;
+    public CinemachineVirtualCamera cmCam;
+    public GameObject firePrefab;
+    public Transform firePrefabPosition;
+
 
     private bool[] _winConditionsKeys;
     private int _winConCounter;
@@ -20,7 +25,18 @@ public class GameManager : Singltone<GameManager>
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (cmCam.LookAt != null)
+            {
+                StartCoroutine(cameraZoom());
+
+            }
+            else
+            {
+                Debug.Log("dont have follow");
+            }
+        }
     }
     private void setupStarting()
     {
@@ -107,18 +123,53 @@ public class GameManager : Singltone<GameManager>
     {
         if (winChecking())
         {
-            winRewardMenu.SetActive(true);
+            StartCoroutine(cameraZoom());
         }
     }
     public bool getIteractIconStatus()
     {
         for (int i = 0; i < _winConditionsKeys.Length - 1; i++)
         {
-            if(_winConditionsKeys[i] == false)
+            if (_winConditionsKeys[i] == false)
             {
                 return false;
             }
         }
         return true;
     }
+
+    private IEnumerator cameraZoom()
+    {
+        float currOrtSize = cmCam.m_Lens.OrthographicSize;
+        float needOrtSzie = 3.5f;
+        float velocity = 0.2f;
+        float smoothTime = 1f;
+        bool active = true;
+        UIManager.Instance.gamePlayPanel.gameObject.SetActive(false);
+        UIManager.Instance.gameplayElements.gameObject.SetActive(false);
+
+        while (active)
+        {
+            currOrtSize = Mathf.Round(cmCam.m_Lens.OrthographicSize * 100.0f) / 100.0f;
+            if (currOrtSize == needOrtSzie)
+                active = false;
+
+            cmCam.m_Lens.OrthographicSize =
+                Mathf.SmoothDamp(cmCam.m_Lens.OrthographicSize, needOrtSzie, ref velocity, smoothTime);
+            Debug.Log("time " + Time.time);
+            yield return null;
+        }
+
+        GameObject fire = Instantiate(firePrefab, firePrefabPosition.position, firePrefab.transform.rotation);
+
+        yield return new WaitForSeconds(3f);
+        winRewardMenu.SetActive(true);
+
+        if (winRewardMenu.activeInHierarchy)
+        {
+            WinReward winReward = winRewardMenu.GetComponent<WinReward>();
+            winReward.playStarFest();
+        }
+    }
+
 }

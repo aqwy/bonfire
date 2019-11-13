@@ -13,9 +13,10 @@ namespace Destructible2D
 		{
 			DrawDefault("Requires");
 			DrawDefault("Intercept");
-			BeginError(Any(t => t.Prefab == null));
+            BeginError(Any(t => t.Prefab == null));
 				DrawDefault("Prefab");
-			EndError();
+            DrawDefault("Cooldown");
+            EndError();
 		}
 	}
 }
@@ -35,8 +36,13 @@ namespace Destructible2D
 		
 		[Tooltip("The prefab that gets spawned under the mouse when clicking")]
 		public GameObject Prefab;
-		
-		protected virtual void Update()
+
+        [Tooltip("The cooldown between shots")]
+        public float Cooldown;
+
+        private float _nextFireTime = 0f;
+
+        protected virtual void Update()
 		{
 			// Required key is down?
 			if (Input.GetKeyDown(Requires) == true)
@@ -49,14 +55,18 @@ namespace Destructible2D
 
 					if (mainCamera != null)
 					{
-						// World position of the mouse
-						var position = D2dHelper.ScreenToWorldPosition(Input.mousePosition, Intercept, mainCamera);
+                        if (Time.time > _nextFireTime)
+                        {
+                            // World position of the mouse
+                            var position = D2dHelper.ScreenToWorldPosition(Input.mousePosition, Intercept, mainCamera);
 
-						// Get a random rotation around the Z axis
-						var rotation = Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f));
-						
-						// Spawn prefab here
-						Instantiate(Prefab, position, rotation);
+                            // Get a random rotation around the Z axis
+                            var rotation = Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f));
+
+                            // Spawn prefab here
+                            Instantiate(Prefab, position, rotation);
+                            _nextFireTime = Time.time + Cooldown;
+                        }
 					}
 				}
 			}
