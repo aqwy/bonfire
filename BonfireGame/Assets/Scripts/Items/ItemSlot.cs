@@ -68,7 +68,6 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler,IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("ui slot enter: " + gameObject.name);
         _imageItem.rectTransform.localScale = new Vector2(1.2f, 1.2f);
         _outline.enabled = true;
     }

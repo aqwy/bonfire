@@ -39,7 +39,6 @@ public class EquipmentPanel : MonoBehaviour
                 previousItem = (Equippableitem)equipmentSlots[i].Item;
                 equipmentSlots[i].Item = equippableitem;
                 _currentSlotItem = equippableitem;
-                Debug.Log("active slot " + CurrentSlotItem.effecttype);
                 return true;
             }
         }
@@ -65,7 +64,6 @@ public class EquipmentPanel : MonoBehaviour
     {
         if (!CurrentSlotItem)
         {
-            Debug.Log("empty active slot");
             return null;
         }
         else

@@ -14,11 +14,11 @@ public class UIManager : Singltone<UIManager>
     public RectTransform newItemSignPanel;
     public GameObject gameplayElements;
 
-
     private float _inventoryHeightSize;
     private float _slidesTime;
     private bool _inventoryOpen = false;
     private bool _optionsOpen = false;
+    private Equippableitem _equpedItem;
 
     private void Start()
     {
@@ -30,7 +30,6 @@ public class UIManager : Singltone<UIManager>
         newItemSignPanel.gameObject.SetActive(false);
     }
 
-
     public void openMainMenu()
     {
         if (!_optionsOpen)
@@ -38,14 +37,23 @@ public class UIManager : Singltone<UIManager>
             mainMenuPanel.DOAnchorPos(Vector2.zero, _slidesTime);
             gamePlayPanel.gameObject.SetActive(false);
             _optionsOpen = true;
-            fadeImg.DOFade(0.6f, 1f);
+
+            if (!_inventoryOpen)
+            {
+                fadeIn();
+            }
         }
         else if (_optionsOpen)
         {
-            mainMenuPanel.DOAnchorPos(new Vector2(-700f,0f), _slidesTime);
+            mainMenuPanel.DOAnchorPos(new Vector2(-700f, 0f), _slidesTime);
             gamePlayPanel.gameObject.SetActive(true);
             _optionsOpen = false;
-            fadeImg.DOFade(0f, 1f);
+
+            if (!_inventoryOpen)
+            {
+                fadeOut();
+                checkEquipedItemUI();
+            }
         }
     }
 
@@ -53,23 +61,63 @@ public class UIManager : Singltone<UIManager>
     {
         if (!_inventoryOpen)
         {
-            inventoryPanel.DOSizeDelta(new Vector2(500f, _inventoryHeightSize), _slidesTime, true);
-            _inventoryOpen = true;
             gameplayElements.gameObject.SetActive(false);
-            fadeImg.DOFade(0.6f, 1f);
+            inventoryPanel.DOSizeDelta(new Vector2(500f, _inventoryHeightSize), _slidesTime, true);
+            fadeIn();
+            _inventoryOpen = true;
         }
         else if (_inventoryOpen)
         {
-            inventoryPanel.DOSizeDelta(new Vector2(0f, _inventoryHeightSize), _slidesTime);
-            _inventoryOpen = false;
-            gameplayElements.gameObject.SetActive(true);
-            fadeImg.DOFade(0f, 1f);
-        }
 
+            inventoryPanel.DOSizeDelta(new Vector2(0f, _inventoryHeightSize), _slidesTime);
+            fadeOut();
+            _inventoryOpen = false;
+
+            checkEquipedItemUI();
+        }
 
         if (newItemSignPanel.gameObject.activeInHierarchy)
         {
             newItemSignPanel.gameObject.SetActive(false);
         }
     }
+
+    public void interactivElemsControlEnter()
+    {
+        gameplayElements.SetActive(false);
+    }
+
+    public void interactivElemsControlExit()
+    {
+        if (_inventoryOpen || _optionsOpen)
+        {
+            gameplayElements.SetActive(false);
+            return;
+        }
+
+        checkEquipedItemUI();
+    }
+
+
+    private void checkEquipedItemUI()
+    {
+        _equpedItem = GameManager.Instance.activeItem.getCurrentItem();
+        if (_equpedItem)
+        {
+            gameplayElements.SetActive(true);
+        }
+    }
+
+    private void fadeIn()
+    {
+        fadeImg.DOFade(0.6f, 1f);
+        fadeImg.raycastTarget = true;
+    }
+
+    private void fadeOut()
+    {
+        fadeImg.DOFade(0f, 1f);
+        fadeImg.raycastTarget = false;
+    }
+
 }

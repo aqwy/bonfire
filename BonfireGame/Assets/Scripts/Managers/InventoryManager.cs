@@ -12,7 +12,10 @@ public class InventoryManager : Singltone<InventoryManager>
 
     private void Awake()
     {
-        inventory.onItemRightClickedEvent += equipFromIventory;
+        if (inventory)
+        {
+            inventory.onItemRightClickedEvent += equipFromIventory;
+        }
     }
 
     private void equipFromIventory(Item item)

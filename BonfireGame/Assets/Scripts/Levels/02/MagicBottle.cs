@@ -5,12 +5,12 @@ using UnityEngine.EventSystems;
 using DG.Tweening;
 
 
-public class MagicBottle : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
+public class MagicBottle : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler,IPointerDownHandler
 {
     public GameObject egg;
-    public GameObject interactiveElements;
     public Equippableitem magicPotion;
 
+    private bool _canUse = false;
     private void Start()
     {
 
@@ -19,26 +19,25 @@ public class MagicBottle : MonoBehaviour, IPointerEnterHandler, IPointerClickHan
     {
         if (!egg)
         {
-            Debug.Log("pointer enter");
-            interactiveElements.SetActive(false);
+            UIManager.Instance.gameplayElements.SetActive(false);
         }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         if (!egg)
-        {
-            StartCoroutine(keepItemDelay(5f));
-            Debug.Log("clicker magic position");
-
+        {               
             StartCoroutine(moveToInventory());
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("clicker magic exit");
-        interactiveElements.SetActive(true);
+        var _currItem = GameManager.Instance.activeItem.getCurrentItem();
+        if (_currItem)
+        {
+            UIManager.Instance.gameplayElements.SetActive(true);
+        }
     }
 
     private IEnumerator keepItemDelay(float delay)
@@ -54,10 +53,26 @@ public class MagicBottle : MonoBehaviour, IPointerEnterHandler, IPointerClickHan
             (new Vector3(0f, 0f, -45f), 0.4f).SetLoops(5, LoopType.Incremental).SetEase(Ease.Linear);
 
         yield return new WaitForSeconds(2f);
+        GameManager.Instance.addWinKey();
+        _canUse = true;
         InventoryManager.Instance.inventory.addItem(magicPotion);
         UIManager.Instance.newItemSignPanel.gameObject.SetActive(true);
+        UIManager.Instance.gameplayElements.SetActive(true);
 
-        Destroy(gameObject,2f);
-        interactiveElements.SetActive(true);
+        Destroy(gameObject, 2f);        
+    }
+
+    public bool canBottleUse()
+    {
+        return _canUse;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (!egg)
+        {
+            StartCoroutine(keepItemDelay(5f));
+            UIManager.Instance.gameplayElements.SetActive(false);
+        }
     }
 }
