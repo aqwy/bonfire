@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 198321560017527566}
   - component: {fileID: 199049106770456860}
   m_Layer: 0
-  m_Name: PS_Parent
+  m_Name: Fire_bonfire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9484,9 +9484,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -937738359
+  m_SortingLayer: 1
+  m_SortingOrder: 30
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -14237,9 +14237,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: -937738359
+  m_SortingLayer: 1
+  m_SortingOrder: 32
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -18990,9 +18990,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -937738359
+  m_SortingLayer: 1
+  m_SortingOrder: 31
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -23743,9 +23743,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -937738359
+  m_SortingLayer: 1
+  m_SortingOrder: 31
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0

@@ -7,8 +7,11 @@ public class HummerUpgrade : MonoBehaviour, IPointerClickHandler, IPointerEnterH
 {
     public SpriteRenderer interactFrameSprite;
     public Equippableitem newSuperHummer;
+    public Transform particlePos;
+    public GameObject poofParticle;
 
     private Equippableitem _currItem;
+    private bool _upgraded = false;
     private void Start()
     {
         interactFrameSprite.enabled = false;
@@ -18,13 +21,14 @@ public class HummerUpgrade : MonoBehaviour, IPointerClickHandler, IPointerEnterH
         InventoryManager.Instance.inventory.addItem(newSuperHummer);
         UIManager.Instance.newItemSignPanel.gameObject.SetActive(true);
         GameManager.Instance.addWinKey();
-        Debug.Log("upgraeing item");
+        GameObject hammerPoof = Instantiate(poofParticle, particlePos.position, Quaternion.Euler(-75f, 0f, 0f));
+        Destroy(hammerPoof, 2f);
+        _upgraded = true;
     }
 
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("humer click");
         _currItem = GameManager.Instance.activeItem.getCurrentItem();
         if (_currItem)
         {
@@ -32,10 +36,9 @@ public class HummerUpgrade : MonoBehaviour, IPointerClickHandler, IPointerEnterH
             {
                 var itemtoRemove = GameManager.Instance.activeItem;
                 itemtoRemove.removeItem(_currItem);
-                gameObject.SetActive(false);
-                /*GetComponent<SpriteRenderer>().enabled = false;
-                interactFrameSprite.enabled = false;*/
+                UIManager.Instance.equipUiEffect();
                 startHummUpgrade();
+                Destroy(gameObject);
             }
         }
     }
@@ -55,5 +58,10 @@ public class HummerUpgrade : MonoBehaviour, IPointerClickHandler, IPointerEnterH
     public void OnPointerExit(PointerEventData eventData)
     {
         interactFrameSprite.enabled = false;
+    }
+
+    public bool statusUpgrae()
+    {
+        return _upgraded;
     }
 }

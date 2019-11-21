@@ -12,22 +12,29 @@ public class UIManager : Singltone<UIManager>
     public RectTransform gamePlayPanel;
     public Image fadeImg;
     public RectTransform newItemSignPanel;
+    /*public RectTransform particlePanel;*/
     public GameObject gameplayElements;
+    public List<GameObject> particles;
 
     private float _inventoryHeightSize;
     private float _slidesTime;
     private bool _inventoryOpen = false;
     private bool _optionsOpen = false;
     private Equippableitem _equpedItem;
+    private int _particleCount;
 
     private void Start()
     {
         _inventoryHeightSize = 150f;
         _slidesTime = 0.8f;
+        _particleCount = 0;
 
         inventoryPanel.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 0f);
         inventoryPanel.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, _inventoryHeightSize);
         newItemSignPanel.gameObject.SetActive(false);
+        /*particlePanel.gameObject.SetActive(false);*/
+
+        closeAllParticles();
     }
 
     public void openMainMenu()
@@ -98,7 +105,6 @@ public class UIManager : Singltone<UIManager>
         checkEquipedItemUI();
     }
 
-
     private void checkEquipedItemUI()
     {
         _equpedItem = GameManager.Instance.activeItem.getCurrentItem();
@@ -120,4 +126,17 @@ public class UIManager : Singltone<UIManager>
         fadeImg.raycastTarget = false;
     }
 
+    public void equipUiEffect()
+    {
+        particles[_particleCount++].SetActive(true);
+        /*particlePanel.gameObject.SetActive(true);*/
+    }
+
+    private void closeAllParticles()
+    {
+        foreach (GameObject particle in particles)
+        {
+            particle.SetActive(false);
+        }
+    }
 }

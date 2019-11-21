@@ -33,6 +33,8 @@ public class InteractWithMagic : MonoBehaviour,IPointerClickHandler,IPointerEnte
                     itemtoRemove.removeItem(_currItem);
                     magicHammer.enabled = true;
                     magicHammer.gameObject.layer = 0;
+                    interactFrameSprite.enabled = false;
+                    this.gameObject.GetComponent<InteractWithMagic>().enabled = false;
                 }
             }
         }

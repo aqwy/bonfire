@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: MagicHammer
   m_EditorClassIdentifier: 
   itemName: MagicHammer
-  icon: {fileID: 21300000, guid: ae95ce13220063541bb791c65ce115ab, type: 3}
+  icon: {fileID: 21300000, guid: ca1fabe2e00b01343bf222731725e936, type: 3}
   equipmenttype: 2
   effecttype: 4
