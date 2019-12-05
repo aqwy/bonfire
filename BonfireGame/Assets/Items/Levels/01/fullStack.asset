@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: fullStack
   m_EditorClassIdentifier: 
   itemName: fullStack
-  icon: {fileID: -5231664827400157271, guid: 6297f8ad6ce52324587ebf2719b406b0, type: 3}
+  icon: {fileID: 21300000, guid: 65dc20ff9624c2046a42c766d2c1f858, type: 3}
   equipmenttype: 2
   effecttype: 3

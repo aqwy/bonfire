@@ -17,10 +17,16 @@ public class MainMenu : MonoBehaviour
         sceneLoadingOperation.allowSceneActivation = false;
     }
 
-    public void LoadScene()
+    public void LoadAsyncScene()
     {
         loadingOverlay.gameObject.SetActive(true);
         sceneLoadingOperation.allowSceneActivation = true;
+    }
+
+    public void LoadingScene(string sceneName)
+    {
+        loadingOverlay.gameObject.SetActive(true);
+        SceneManager.LoadScene(sceneName);
     }
 }
 

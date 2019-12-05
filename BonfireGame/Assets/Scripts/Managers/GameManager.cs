@@ -12,7 +12,7 @@ public class GameManager : Singltone<GameManager>
     public CinemachineVirtualCamera cmCam;
     public GameObject firePrefab;
     public Transform firePrefabPosition;
-
+    public int LevelToUnlock;
 
     private bool[] _winConditionsKeys;
     private int _winConCounter;
@@ -123,6 +123,7 @@ public class GameManager : Singltone<GameManager>
     {
         if (winChecking())
         {
+            PlayerPrefs.SetInt("levelReached", LevelToUnlock);
             StartCoroutine(cameraZoom());
         }
     }
@@ -144,6 +145,11 @@ public class GameManager : Singltone<GameManager>
         float needOrtSzie = 3.5f;
         float velocity = 0.2f;
         float smoothTime = 1f;
+        float defaultScreenXPos = 0.5f;
+        float defaultScreenYPos = 0.8f;
+        float composterVelocity = 0.05f;
+        CinemachineComposer composer;
+        composer = cmCam.GetCinemachineComponent<CinemachineComposer>();
         bool active = true;
         UIManager.Instance.gamePlayPanel.gameObject.SetActive(false);
         UIManager.Instance.gameplayElements.gameObject.SetActive(false);
@@ -153,6 +159,18 @@ public class GameManager : Singltone<GameManager>
             currOrtSize = Mathf.Round(cmCam.m_Lens.OrthographicSize * 100.0f) / 100.0f;
             if (currOrtSize == needOrtSzie)
                 active = false;
+
+            if (composer.m_ScreenX != defaultScreenXPos)
+            {
+                composer.m_ScreenX = Mathf.SmoothDamp
+                    (composer.m_ScreenX, defaultScreenXPos, ref composterVelocity, smoothTime * 2);
+            }
+
+            if (composer.m_ScreenY != defaultScreenYPos)
+            {
+                composer.m_ScreenY = Mathf.SmoothDamp
+                    (composer.m_ScreenY, defaultScreenYPos, ref composterVelocity, smoothTime * 2);
+            }
 
             cmCam.m_Lens.OrthographicSize =
                 Mathf.SmoothDamp(cmCam.m_Lens.OrthographicSize, needOrtSzie, ref velocity, smoothTime);
@@ -171,5 +189,4 @@ public class GameManager : Singltone<GameManager>
             winReward.playStarFest();
         }
     }
-
 }

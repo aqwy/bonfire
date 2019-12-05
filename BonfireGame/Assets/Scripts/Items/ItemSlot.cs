@@ -48,14 +48,14 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler,IPointerEnterHandler
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData != null && eventData.button == PointerEventData.InputButton.Right)
-        {
+        /*if (eventData != null && eventData.button == PointerEventData.InputButton.Right)
+        {*/
             if (Item != null && onRightClickEvent != null)
             {
                 onRightClickEvent(Item);
                 GameManager.Instance.setInteractive();
             }
-        }
+        /*}*/
     }
 
     protected virtual void OnValidate()

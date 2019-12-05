@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InteractWithMagic : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IPointerExitHandler
+public class InteractWithMagic : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IPointerExitHandler,IPointerDownHandler
 {
     public SpriteRenderer interactFrameSprite;
     public SpriteRenderer magicHammer;
@@ -20,7 +20,7 @@ public class InteractWithMagic : MonoBehaviour,IPointerClickHandler,IPointerEnte
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        _canUpdate = magicBottle.canBottleUse();
+        /*_canUpdate = magicBottle.canBottleUse();
         if (_canUpdate)
         {
             _currItem = GameManager.Instance.activeItem.getCurrentItem();
@@ -37,7 +37,7 @@ public class InteractWithMagic : MonoBehaviour,IPointerClickHandler,IPointerEnte
                     this.gameObject.GetComponent<InteractWithMagic>().enabled = false;
                 }
             }
-        }
+        }*/
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -62,6 +62,28 @@ public class InteractWithMagic : MonoBehaviour,IPointerClickHandler,IPointerEnte
         if(_currItem)
         {
             UIManager.Instance.gameplayElements.SetActive(true);
+        }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        _canUpdate = magicBottle.canBottleUse();
+        if (_canUpdate)
+        {
+            _currItem = GameManager.Instance.activeItem.getCurrentItem();
+            if (_currItem)
+            {
+                if (_currItem.effecttype.ToString() == "crush")
+                {
+                    UIManager.Instance.gameplayElements.SetActive(false);
+                    var itemtoRemove = GameManager.Instance.activeItem;
+                    itemtoRemove.removeItem(_currItem);
+                    magicHammer.enabled = true;
+                    magicHammer.gameObject.layer = 0;
+                    interactFrameSprite.enabled = false;
+                    this.gameObject.GetComponent<InteractWithMagic>().enabled = false;
+                }
+            }
         }
     }
 }

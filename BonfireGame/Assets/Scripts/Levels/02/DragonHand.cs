@@ -10,6 +10,7 @@ public class DragonHand : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     public Animator atackAnim;
     public GameObject dragonFireParticle;
     public Transform dragFirePos;
+    public Dragon dragonMain;
 
     void Start()
     {
@@ -20,26 +21,30 @@ public class DragonHand : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     {
         if (gameObject.GetComponent<Collider2D>().isActiveAndEnabled)
         {
+            dragonMain.sleepingDragon(false);
             GameManager.Instance.addWinKey();
             if (GameManager.Instance.winChecking())
-            {              
+            {
                 if (atackAnim)
                 {
                     atackAnim.SetTrigger("Burned");
-                    GameObject fire = Instantiate
-                        (dragonFireParticle, dragFirePos.position, dragonFireParticle.transform.rotation);
-                    Destroy(fire, 2f);
-                }
-                GameManager.Instance.getWinReward();               
-            }
+                    if (dragonFireParticle)
+                    {
+                        GameObject fire = Instantiate
+                            (dragonFireParticle, dragFirePos.position, dragonFireParticle.transform.rotation);
+                        fire.transform.SetParent(dragFirePos);
 
-            Debug.Log(GameManager.Instance.winChecking());   
+                        Destroy(fire, 4f);
+                    }
+                }
+                GameManager.Instance.getWinReward();
+            }
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(GameManager.Instance.winChecking())
+        if (GameManager.Instance.winChecking())
         {
             this.gameObject.GetComponent<Collider2D>().enabled = false;
             return;
@@ -57,6 +62,6 @@ public class DragonHand : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
         if (gameObject.GetComponent<Collider2D>().isActiveAndEnabled)
         {
             interactHandFrameSprite.enabled = false;
-        }     
+        }
     }
 }

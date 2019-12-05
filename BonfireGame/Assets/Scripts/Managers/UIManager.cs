@@ -14,7 +14,7 @@ public class UIManager : Singltone<UIManager>
     public RectTransform newItemSignPanel;
     /*public RectTransform particlePanel;*/
     public GameObject gameplayElements;
-    public List<GameObject> particles;
+    public List<ParticleSystem> particles;
 
     private float _inventoryHeightSize;
     private float _slidesTime;
@@ -128,15 +128,16 @@ public class UIManager : Singltone<UIManager>
 
     public void equipUiEffect()
     {
-        particles[_particleCount++].SetActive(true);
+        particles[_particleCount].gameObject.SetActive(true);
+        particles[_particleCount++].Play();
         /*particlePanel.gameObject.SetActive(true);*/
     }
 
     private void closeAllParticles()
     {
-        foreach (GameObject particle in particles)
+        foreach (ParticleSystem particle in particles)
         {
-            particle.SetActive(false);
+            particle.gameObject.SetActive(false);
         }
     }
 }
