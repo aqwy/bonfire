@@ -5,11 +5,14 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class MiniGamePanel : MonoBehaviour, IPointerClickHandler
+public class MiniGamePanel : MonoBehaviour
 {
-    public RectTransform miniGame;
     public Image[] activeImages;
     public Image[] linkImages;
+    public Image[] paintsColors;
+    public Image[] wireTopColors;
+    public Image[] wireBotColors;
+    public Image currentPaintColor;
 
     private Color _normalColor = Color.white;
     private Color[] _colors = { Color.red, Color.blue, Color.green, Color.cyan, Color.yellow };
@@ -17,17 +20,17 @@ public class MiniGamePanel : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {
-        miniGame.gameObject.SetActive(false);
         addColors();
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        miniGame.gameObject.SetActive(true);
+        currentPaintColor.color = _normalColor;
     }
 
     private void addColors()
     {
+        for (int i = 0; i < paintsColors.Length; i++)
+        {
+            paintsColors[i].color = _colors[i];
+        }
+
         int[] numbers = { 0, 1, 2, 3, 4 };
         numbers = ShuffleArray(numbers);
 
@@ -38,9 +41,23 @@ public class MiniGamePanel : MonoBehaviour, IPointerClickHandler
 
         numbers = ShuffleArray(numbers);
 
-        for (int i = 0; i < activeImages.Length; i++)
+        for (int i = 0; i < linkImages.Length; i++)
         {
             linkImages[numbers[i]].color = _colors[i];
+        }
+
+        numbers = ShuffleArray(numbers);
+
+        for (int i = 0; i < wireTopColors.Length; i++)
+        {
+            wireTopColors[numbers[i]].color = _colors[i];
+        }
+
+        numbers = ShuffleArray(numbers);
+
+        for (int i = 0; i < wireBotColors.Length; i++)
+        {
+            wireBotColors[numbers[i]].color = _colors[i];
         }
     }
 
@@ -55,11 +72,6 @@ public class MiniGamePanel : MonoBehaviour, IPointerClickHandler
             newArray[r] = tmp;
         }
         return newArray;
-    }
-
-    public Image[] getArray()
-    {
-        return linkImages;
     }
 }
 
