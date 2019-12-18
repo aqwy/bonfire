@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class MiniGamePanel : MonoBehaviour
 {
+    public Image[] centrLinkPanel;
     public Image[] activeImages;
     public Image[] linkImages;
     public Image[] paintsColors;
@@ -20,6 +21,7 @@ public class MiniGamePanel : MonoBehaviour
 
     void Start()
     {
+        closeLinks();
         addColors();
         currentPaintColor.color = _normalColor;
     }
@@ -72,6 +74,26 @@ public class MiniGamePanel : MonoBehaviour
             newArray[r] = tmp;
         }
         return newArray;
+    }
+
+    private void closeLinks()
+    {
+        for (int i = 0; i < centrLinkPanel.Length; i++)
+        {
+            centrLinkPanel[i].enabled = false;
+        }
+    }
+
+    public bool checkFullLink()
+    {
+        for (int i = 0; i < centrLinkPanel.Length; i++)
+        {
+            if (!centrLinkPanel[i].enabled)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
 

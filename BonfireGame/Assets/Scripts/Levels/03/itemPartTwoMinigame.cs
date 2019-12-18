@@ -9,6 +9,8 @@ public class itemPartTwoMinigame : MonoBehaviour, IPointerClickHandler
 {
     public Image paintCurrColor;
     public UIEffect imgEffect;
+    public bool isTop;
+    public minigameParent minigame;
 
     private Color _trueItemColor;
     private Color _paintColor;
@@ -26,12 +28,29 @@ public class itemPartTwoMinigame : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        _paintColor = paintCurrColor.GetComponent<PaintMainColor>().getMainPaintColor();
-        if (!_paintColor.Equals(_normalColor))
+        if (isTop)
         {
-            this.GetComponent<Image>().color = _paintColor;
-            imgEffect.enabled = false;
-            Debug.Log("cvet raskrasi ne beliy");
+            _paintColor = paintCurrColor.GetComponent<PaintMainColor>().getMainPaintColor();
+            if (!_paintColor.Equals(_normalColor))
+            {
+                this.GetComponent<Image>().color = _paintColor;
+                imgEffect.enabled = false;
+                Debug.Log("cvet raskrasi ne beliy");
+            }
+        }
+        else if (!isTop)
+        {
+            _paintColor = paintCurrColor.GetComponent<PaintMainColor>().getMainPaintColor();
+            if (!_paintColor.Equals(_normalColor))
+            {
+                this.GetComponent<Image>().color = _paintColor;
+                imgEffect.enabled = false;
+                minigame.sightImg.color = getTrueColor();
+            }
+            else
+            {
+                minigame.sightImg.color = getTrueColor();
+            }
         }
     }
 
