@@ -17,6 +17,8 @@ public class Gun : MonoBehaviour
     public bool isUP { get; set; }
     public bool isDown { get; set; }
 
+    private int _bulletsPoolSize;
+    private float _nextfireTime;
     private bool _fixPower;
     private float _bulletVelocity;
     private float _currRot;
@@ -28,7 +30,8 @@ public class Gun : MonoBehaviour
         isDown = false;
         _fixPower = false;
         _bulletVelocity = 0f;
-        Debug.Log(trunkSprite.transform.rotation.eulerAngles.z);
+        _nextfireTime = 0f;
+        _bulletsPoolSize = 5;
     }
     private void Update()
     {
@@ -47,16 +50,20 @@ public class Gun : MonoBehaviour
 
     public void shooting()
     {
-        _fixPower = true;
-        _bulletVelocity *= 20;
-        GameObject bullet = Instantiate(shootPref, shootPos.position, Quaternion.identity);
-        Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
-        bulletRb.AddRelativeForce(shootPos.transform.TransformDirection
-            (new Vector2((Mathf.Cos(shootPos.transform.rotation.z * Mathf.Deg2Rad) * _bulletVelocity),
-            (Mathf.Sin(shootPos.transform.rotation.z * Mathf.Deg2Rad) * _bulletVelocity))),
-            ForceMode2D.Impulse);
+        if (Time.time > _nextfireTime)
+        {
+            _fixPower = true;
+            _nextfireTime = Time.time + cooldown;
+            _bulletVelocity *= 30;
+            GameObject bullet = Instantiate(shootPref, shootPos.position, Quaternion.identity);
+            Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+            bulletRb.AddRelativeForce(shootPos.transform.TransformDirection
+                (new Vector2((Mathf.Cos(shootPos.transform.rotation.z * Mathf.Deg2Rad) * _bulletVelocity),
+                (Mathf.Sin(shootPos.transform.rotation.z * Mathf.Deg2Rad) * _bulletVelocity))),
+                ForceMode2D.Impulse);
 
-        StartCoroutine(shootCooldown());
+            StartCoroutine(shootCooldown());
+        }     
     }
 
     public void powerShoot()
@@ -74,7 +81,7 @@ public class Gun : MonoBehaviour
 
     private IEnumerator shootCooldown()
     {
-        yield return new WaitForSeconds(cooldown);
+        yield return new WaitForSeconds(1f);
         _fixPower = false;
     }
 
@@ -98,5 +105,5 @@ public class Gun : MonoBehaviour
             trunkSprite.transform.Rotate(0f, 0f, -_rotStep);
             Debug.Log(_currRot);
         }
-    }
+    }  
 }
