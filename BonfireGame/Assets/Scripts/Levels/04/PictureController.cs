@@ -7,6 +7,9 @@ public class PictureController : MonoBehaviour
 {
     public GameObject[] pictures;
     public float transitionTime;
+    public Gun gun;
+    public WallController wallController;
+    public SpyGlass spyGlass;
 
     private int _count;
     void Start()
@@ -30,5 +33,16 @@ public class PictureController : MonoBehaviour
         {
             pictures[_count].transform.DOLocalMoveX(0, transitionTime).SetDelay(transitionTime + 1f);
         }
+        StartCoroutine(activateGun());
+    }
+
+    private IEnumerator activateGun()
+    {
+        yield return new WaitForSeconds(transitionTime * 2.5f);
+        spyGlass.enabled = true;
+        gun.gunIsReady();
+        wallController.gameObject.SetActive(true);
+        wallController.resetAllWalls();     
+        wallController.startAllWalls();
     }
 }

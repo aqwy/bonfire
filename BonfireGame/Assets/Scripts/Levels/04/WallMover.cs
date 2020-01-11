@@ -45,4 +45,9 @@ public class WallMover : MonoBehaviour
         _tweener = transform.DOLocalMoveY(startPosY, 2f);
         _tweener.Play();
     }
+
+    public void resetWall()
+    {
+        this.transform.position = _currentPos;
+    }
 }

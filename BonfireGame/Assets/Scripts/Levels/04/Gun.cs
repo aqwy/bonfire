@@ -9,6 +9,8 @@ public class Gun : MonoBehaviour
     public GameObject shootPref;
     public float bulletSpeed = 2f;
     public Slider slider;
+    public RectTransform gunPanel;
+    public RectTransform pictureMinigamePanel;
     public float cooldown;
     public SpriteRenderer trunkSprite;
     public float maxZ;
@@ -23,6 +25,7 @@ public class Gun : MonoBehaviour
     private float _bulletVelocity;
     private float _currRot;
     private float _rotStep = 0.6f;
+    private Equippableitem _equippableitem;
 
     private void Start()
     {
@@ -32,6 +35,9 @@ public class Gun : MonoBehaviour
         _bulletVelocity = 0f;
         _nextfireTime = 0f;
         _bulletsPoolSize = 5;
+
+        gunIsReady();
+        pictureMinigamePanel.gameObject.SetActive(false);
     }
     private void Update()
     {
@@ -45,7 +51,7 @@ public class Gun : MonoBehaviour
         if (isDown)
         {
             downRotateTrunk();
-        }
+        }    
     }
 
     public void shooting()
@@ -63,7 +69,7 @@ public class Gun : MonoBehaviour
                 ForceMode2D.Impulse);
 
             StartCoroutine(shootCooldown());
-        }     
+        }
     }
 
     public void powerShoot()
@@ -105,5 +111,14 @@ public class Gun : MonoBehaviour
             trunkSprite.transform.Rotate(0f, 0f, -_rotStep);
             Debug.Log(_currRot);
         }
-    }  
+    }
+    public void gunIsNotReady()
+    {
+        gunPanel.gameObject.SetActive(false);
+    }
+
+    public void gunIsReady()
+    {
+        gunPanel.gameObject.SetActive(true);
+    }
 }

@@ -6,6 +6,7 @@ public class WallController : MonoBehaviour
 {
     public WallMover[] walls;
     public float cooldown = 5f;
+    public StopButton stopButton;
 
     private bool _status;
 
@@ -38,10 +39,21 @@ public class WallController : MonoBehaviour
         }
     }
 
+    public void resetAllWalls()
+    {
+        for (int i = 0; i < walls.Length; i++)
+        {
+            walls[i].resetWall();
+        }
+        _status = false;
+    }
+
     private IEnumerator waitCooldown()
     {
         yield return new WaitForSeconds(cooldown);
         startAllWalls();
         _status = true;
+        stopButton.swaper.resetSprite();
+        stopButton.lightSprite.color = Color.red;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -13,7 +14,7 @@ public class PictureminigameController : MonoBehaviour
     public RectTransform[] topPanels;
     public Sprite frontImg;
 
-    private string[] _pictureNames = { "MONNA LISA", "krik", "mishkivlesu" };
+    private string[] _pictureNames = { "MONA LISA", "THE SCREAM", "GUERNICA" };
     private char[] _lettersPicture;
     private int _pictureCount;
     void Start()
@@ -65,7 +66,7 @@ public class PictureminigameController : MonoBehaviour
 
     private char[] RemoveDublicateLetters(char[] letter)
     {
-        char[] noDuplicates = letter.Clone() as char[];
+        /*char[] noDuplicates = letter.Clone() as char[];
         string clearName = string.Empty;
 
         char previousLetter = noDuplicates[0];
@@ -83,6 +84,9 @@ public class PictureminigameController : MonoBehaviour
         }
 
         noDuplicates = clearName.ToCharArray();
+        return noDuplicates;*/
+
+        char[] noDuplicates = letter.Distinct().ToArray();
         return noDuplicates;
     }
 
@@ -95,8 +99,12 @@ public class PictureminigameController : MonoBehaviour
 
         for (int i = 0; i < topPanels.Length; i++)
         {
-            topPanels[i].gameObject.SetActive(false);
             /*topPanels[i].GetComponentInChildren<TextMeshProUGUI>().text = string.Empty;*/
+            if (topPanels[i].transform.childCount > 0)
+            {
+                Destroy(topPanels[i].transform.GetChild(0).gameObject);
+            }
+            topPanels[i].gameObject.SetActive(false);
         }
     }
 
@@ -117,6 +125,7 @@ public class PictureminigameController : MonoBehaviour
             pictureControll.nextPicture();
             _pictureCount++;
             minigamePanel.gameObject.SetActive(false);
+            fillBotPanels();
             Debug.Log("complt popadanie");
         }
         else
